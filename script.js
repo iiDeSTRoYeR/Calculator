@@ -61,7 +61,7 @@ document.addEventListener('keydown', (e) => {
         populateNumber(e.key);
     } else if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/' || e.key === '.') {
         populateNumber(e.key);
-    } else if (e.key === 'Enter') {
+    } else if (e.key === 'e') {
         populateNumber('=');
     } else if (e.key === 'Backspace') {
         populateNumber('Del');
