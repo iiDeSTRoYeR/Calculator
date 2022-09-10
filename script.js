@@ -68,7 +68,7 @@ document.addEventListener('keydown', (e) => {
     } else if (e.key === 'c') {
         clearDisplay();
     }
-    
+
 })
 
 
@@ -99,7 +99,7 @@ function populateNumber(e) {
                     number = number.slice(0, -1);
                     if (number === '') {
                         number = 0;
-                    }     
+                    }
                     display.textContent = number;
                     break;
                 default:
@@ -115,7 +115,11 @@ function populateNumber(e) {
                 //Checks if operator is null due to a prevoius EQUALS press, and checks if memory is filled
                 if (memory.length >= 2 && operator != null) {
                     number = operate(operator, parseFloat(memory[0]), parseFloat(memory[1]));
-                    display.textContent = +number.toFixed(6); //Rounds to 6 decimal places and removes trailing zeros
+                    if (typeof number === 'string') {
+                        display.textContent = number;
+                    } else {
+                        display.textContent = +number.toFixed(6); //Rounds to 6 decimal places and removes trailing zeros
+                    }
                     operator = null;
                     memory = [];
                     memory.push(number);
@@ -138,7 +142,11 @@ function populateNumber(e) {
                         operator = e;
                     }
                     number = operate(operator, parseFloat(memory[0]), parseFloat(memory[1]))
-                    display.textContent = +number.toFixed(6);
+                    if (typeof number === 'string') {
+                        display.textContent = number;
+                    } else {
+                        display.textContent = +number.toFixed(6);
+                    }
                     memory = [];
                     memory.push(number);
                     number = '';
