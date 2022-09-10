@@ -16,7 +16,9 @@
     justify-content: space-between;
 }
 
-
+#displayContent{
+    text-align: right;
+}
 
 .row {
     display: flex;
