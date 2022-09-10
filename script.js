@@ -79,8 +79,8 @@ let operator = null;
 let memory = [];
 function populateNumber(e) {
     if (parseFloat(e) || e === '0') {
-        number += e
-        display.textContent = number
+        number += e;
+        display.textContent = +number;
     }
     //Triggered when a input in not a number (either to save the number or to perform an operation)
     if (isNaN(parseFloat(e))) {
