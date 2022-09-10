@@ -1,0 +1,52 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+#container {
+    border: 2px black solid;
+    margin: 20rem 10rem;
+    background-color: #f0f0f0;
+}
+
+#display {
+    border: 2px black solid;
+    margin: 1rem;
+    padding: 0 1rem;
+    background-color: azure;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem;
+}
+
+.wideBtn {
+    flex: 2;
+    margin: 0 0.5rem;
+    height: 3rem;
+}
+.btn {
+    height: 3rem;
+    flex: 1;
+    margin: 0 0.5rem;
+}
+
+.wideBtn, .btn {
+    font-size: 2rem;
+    background-color: #fffcfc;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.wideBtn:hover, .btn:hover {
+    background-color: #f0f0f0;
+}
+
+.wideBtn:active, .btn:active {
+    background-color: #e0e0e0;
+}
