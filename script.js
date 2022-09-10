@@ -65,7 +65,7 @@ document.addEventListener('keydown', (e) => {
         populateNumber('=');
     } else if (e.key === 'Backspace') {
         populateNumber('Del');
-    } else if (e.key === 'Escape') {
+    } else if (e.key === 'c') {
         clearDisplay();
     }
     
@@ -155,8 +155,8 @@ function populateNumber(e) {
 
 function clearDisplay() {
     number = '';
-    memory = []
-    operator = null
+    memory = [];
+    operator = null;
     display.textContent = '0';
     displayOp.textContent = '';
     buttons.forEach(button => button.removeAttribute('disabled'));
